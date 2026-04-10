@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      font-size: 14px;
+      margin: 12px;
+      min-width: 200px;
+    }
+    button {
+      width: 100%;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    p {
+      margin: 0 0 8px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <p>在当前页识别「DOWNLOAD」列，用浏览器下载队列拉取文件（尽量不跳转当前页）。支持多个 DevExpress 列表（如 Raw Data、Key Process Cpk 等）：请先切换到对应标签，再点全部下载。点击后会弹出待下载文件名清单。需授予「下载」权限。</p>
+  <p style="color:#555;margin-top:8px;">若每个文件都弹出「存储为」对话框：请打开 Chrome 设置 → 下载内容 → 关闭「下载前询问每个文件的保存位置」。</p>
+  <button type="button" id="run">全部下载</button>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Download Helper",
+  "version": "1.0.0",
+  "description": "在当前页文件列表中依次触发 DOWNLOAD 列的全部下载按钮",
+  "permissions": ["activeTab", "scripting", "downloads"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "action": {
+    "default_title": "下载当前页列表全部文件",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
